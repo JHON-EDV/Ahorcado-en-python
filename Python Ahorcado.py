@@ -85,8 +85,23 @@ def main():
     tries=0                      # intentos
     
     while True:
+        # Mostrar el tablero
         show_board(hidden_word,tries)
         current_letter =str(input('Escoge una letra: '))
+        # Logica
+        letter_indexes=[]
+        for  idx in range(len(word)):
+            if word[idx] == current_letter:
+                letter_indexes.append(idx)
+        
+        if(len(letter_indexes))==0: # si la lista esta vacia no fue correcto
+            tries += 1
+        
+        else:                       # si la lista tiene algo se cambia el _ por la letra digitada
+            for idx in letter_indexes:
+                hidden_word[idx] = current_letter
+
+            letter_indexes =[]
 
 def show_board(hidden_word,tries):
     print(IMAGES[tries])
