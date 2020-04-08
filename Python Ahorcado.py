@@ -80,7 +80,7 @@ WORD=['lavadora','secadora','sofa','democracia','diputado','teclado']
 
 
 def main():
-    word = rando_word()
+    word = random_word()
     hidden_word=['_']*len(word)  # uso de cadenas
     tries=0                      # intentos
     
@@ -90,10 +90,14 @@ def main():
 
 def show_board(hidden_word,tries):
     print(IMAGES[tries])
+    print('')
+    print(hidden_word)
+    print('_.~"~._.~"~._.~"~._.~"~.~"~._.~"~._.~"~._.~"~._')
 
 
-def rando_word():
-    idx = randon.ranint(0, len(WORD)-1)
+
+def random_word():
+    idx = random.randint(0, len(WORD)-1)
     return WORD[idx]
 
 
