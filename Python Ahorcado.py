@@ -86,7 +86,7 @@ def main():
     
     while True:
         show_board(hidden_word,tries)
-
+        current_letter =str(input('Escoge una letra: '))
 
 def show_board(hidden_word,tries):
     print(IMAGES[tries])
