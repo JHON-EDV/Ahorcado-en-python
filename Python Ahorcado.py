@@ -76,7 +76,7 @@ IMAGES = ['''
 
 ''']
 
-WORD=['lavadora','secadora','sofa','democracia','diputado','teclado']
+WORD=['lavadora','secadora','sofa','diana','democracia','diputado','teclado']
 
 
 def main():
